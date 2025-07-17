@@ -5,13 +5,17 @@
         static void Main(string[] args)
         {
             // 声明变量。
-            string name = string.Empty;
+            string firstName = string.Empty;
+            string lastName = string.Empty;
             int age = 0;
             int retirementAge = 65;
 
             // 提示用户输入姓名和年龄。
-            Console.WriteLine("Please enter your name:");
-            name = Console.ReadLine();
+            Console.WriteLine("Please enter your first name:");
+            firstName = Console.ReadLine();
+
+            Console.WriteLine("Please enter your last name:");
+            lastName = Console.ReadLine();
 
             // 提示用户输入年龄。
             Console.WriteLine("Please enter your age:");
@@ -21,7 +25,7 @@
             int workingYearsRemaining = retirementAge - age;
 
             // 输出结果。
-            Console.WriteLine($"Full name: {name}");
+            Console.WriteLine($"Full name: {firstName} {lastName}");
             Console.WriteLine($"Age: {age}");
             Console.WriteLine($"Working years remaining: {workingYearsRemaining}");
         }
