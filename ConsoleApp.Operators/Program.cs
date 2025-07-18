@@ -38,6 +38,7 @@
             Console.WriteLine("");
             Console.WriteLine("***************** End Math Results **************");
 
+
             // -- Logic Operations and Operators -- //
 
             bool isGreaterThan = num1 > num2;
@@ -57,6 +58,33 @@
             Console.WriteLine($"Is Not Equal: {isNotEqual}");
             Console.WriteLine();
             Console.WriteLine("***************** End Logic Results **************");
+
+
+            // -- Assignment Operations and Operators -- //
+
+            Console.Write("Enter Random Value for Assignment Operations: ");
+            int randomValue = Convert.ToInt32(Console.ReadLine());
+            //int increaseValue = num1 + randomValue;
+
+            Console.WriteLine("***************** Assignment Results **************");
+            Console.WriteLine();
+            //num1 = num1 + randomValue;
+            num1 += randomValue;
+            Console.WriteLine($"Num 1 increased by {randomValue}: {num1}");
+            //num1 = num1 - randomValue;
+            num1 -= randomValue;
+            Console.WriteLine($"Num 1 reduced by {randomValue}: {num1}");
+            //num1 = num1 * randomValue;
+            num1 /= randomValue;
+            Console.WriteLine($"Num 1 divided by {randomValue}: {num1}");
+            //num1 = num1 / randomValue;
+            num1 %= randomValue;
+            Console.WriteLine($"Num 1 mod by {randomValue}: {num1}");
+            //num1 = num1 % randomValue;
+            num1 *= randomValue;
+            Console.WriteLine($"Num 1 multiplied by {randomValue}: {num1}");
+            Console.WriteLine();
+            Console.WriteLine("***************** End Assignment Results **************");
         }
     }
 }
