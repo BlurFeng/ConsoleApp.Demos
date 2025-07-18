@@ -11,6 +11,8 @@
             string input = Console.ReadLine();
             int num2 = Convert.ToInt32(input);
 
+            // -- Math Operations and operators -- //
+
             // 相加。
             int sum = num1 + num2;
 
@@ -26,11 +28,35 @@
             // 取余。
             int modulus = num1 % num2;
 
-            Console.WriteLine($"The sum of {num1} and {num2} is: {sum}");
-            Console.WriteLine($"The difference between {num1} and {num2} is: {difference}");
-            Console.WriteLine($"The product of {num1} and {num2} is: {product}");
-            Console.WriteLine($"The quotient of {num1} and {num2} is: {quotient}");
-            Console.WriteLine($"The modulus of {num1} and {num2} is: {modulus}");
+            Console.WriteLine("***************** Math Results **************");
+            Console.WriteLine("");
+            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine($"Difference: {difference}");
+            Console.WriteLine($"Product: {product}");
+            Console.WriteLine($"Quotient: {quotient}");
+            Console.WriteLine($"Modulus: {modulus}");
+            Console.WriteLine("");
+            Console.WriteLine("***************** End Math Results **************");
+
+            // -- Logic Operations and Operators -- //
+
+            bool isGreaterThan = num1 > num2;
+            bool isLessThan = num1 < num2;
+            bool isEqualTo = num1 == num2;
+            bool isGreaterThanOrEqualTo = num1 >= num2;
+            bool isLessThanOrEqualTo = num1 <= num2;
+            bool isNotEqual = num1 != num2;
+
+            Console.WriteLine("***************** Logic Results **************");
+            Console.WriteLine();
+            Console.WriteLine($"Is Greater Than: {isGreaterThan}");
+            Console.WriteLine($"Is Less Than: {isLessThan}");
+            Console.WriteLine($"Is Equal To: {isEqualTo}");
+            Console.WriteLine($"Is Greater Than Or Equal To: {isGreaterThanOrEqualTo}");
+            Console.WriteLine($"Is Less Than Or Equal To: {isLessThanOrEqualTo}");
+            Console.WriteLine($"Is Not Equal: {isNotEqual}");
+            Console.WriteLine();
+            Console.WriteLine("***************** End Logic Results **************");
         }
     }
 }
