@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            // 变量声明。
             // Variable Declarations
             int choice = 0;
             int num1, num2 = 0;
@@ -12,17 +13,7 @@
             {
                 try
                 {
-                    Console.Clear();
-                    Console.WriteLine("******** - Welcome to the sample calculator! - ********");
-
-                    // 提示用户输入操作。
-                    // Show calculator options / Show menu
-                    Console.WriteLine("Please select an operation (-1 to exit program) ");
-                    Console.WriteLine("1. Addition");
-                    Console.WriteLine("2. Subtraction");
-                    Console.WriteLine("3. Multiplication");
-                    Console.WriteLine("4. Division");
-                    Console.WriteLine("5. Fibonacci sequence");
+                    PrintMenu();
 
                     choice = Convert.ToInt32(Console.ReadLine());
 
@@ -33,6 +24,7 @@
 
                     Console.Write("Please enter the first number: ");
                     num1 = Convert.ToInt32(Console.ReadLine());
+
                     Console.Write("Please enter the second number: ");
                     num2 = Convert.ToInt32(Console.ReadLine());
 
@@ -69,22 +61,19 @@
                     switch (choice)
                     {
                         case 1:
-                            answer = num1 + num2;
+                            answer = AddNumbers(num1, num2);
                             break;
                         case 2:
-                            answer = num1 - num2;
+                            answer = SubtractNumbers(num1, num2);
                             break;
                         case 3:
-                            answer = num1 * num2;
+                            answer = Product(num1, num2);
                             break;
                         case 4:
-                            answer = num1 / num2;
+                            answer = Quotient(num1, num2);
                             break;
                         case 5:
-                            for (int i = num1; i <= num2; i++)
-                            {
-                                answer += i;
-                            }
+                            answer = Fibonnaci(num1, num2);
                             break;
                         default:
                             throw new Exception("Invalid Menu Item Selected.");
@@ -109,6 +98,55 @@
             }
 
             Console.WriteLine("******** - Thank you for using the sample calculator! - ********");
+
+            // 方法声明。
+            // Method Definitions.
+            int AddNumbers(int num1, int num2)
+            {
+                return num1 + num2;
+            }
+
+            int SubtractNumbers(int num1, int num2)
+            {
+                return num1 - num2;
+            }
+
+            int Product(int num1, int num2)
+            {
+                return num1 * num2;
+            }
+
+            int Quotient(int num1, int num2)
+            {
+                return num1 / num2;
+            }
+
+            int Fibonnaci(int num1, int num2)
+            {
+                var answer = 0;
+                for (int i = num1; i <= num2; i++)
+                {
+                    answer += i;
+                }
+                return answer;
+            }
+
+            void PrintMenu()
+            {
+                // 在 while 循环开始时清除控制台并显示欢迎消息。
+                // Clear the console and show welcome message at the start of while loop
+                Console.Clear();
+                Console.WriteLine("******** - Welcome to the sample calculator! - ********");
+
+                // 提示用户输入操作。
+                // Show calculator options / Show menu
+                Console.WriteLine("Please select an operation (-1 to exit program) ");
+                Console.WriteLine("1. Addition");
+                Console.WriteLine("2. Subtraction");
+                Console.WriteLine("3. Multiplication");
+                Console.WriteLine("4. Division");
+                Console.WriteLine("5. Fibonacci sequence");
+            }
         }
     }
 }
